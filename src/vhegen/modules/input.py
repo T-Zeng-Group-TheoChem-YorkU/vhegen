@@ -416,7 +416,7 @@ def addones(arg,sym):
         for i in range(numarg):
             if arg[i][0].upper()=='E':
                 if (len(arg[i])>1):
-                    if arg[i][1]!=1:
+                    if arg[i][1]!='1':
                         arg[i]=arg[i][0]+'1'+arg[i][1:]
                 else:
                     arg[i]=arg[i]+'1'
@@ -424,7 +424,7 @@ def addones(arg,sym):
         for i in range(numarg):
             if arg[i][0].upper()=='E':
                 if (len(arg[i])>1):
-                    if arg[i][1]!=1:
+                    if arg[i][1]!='1':
                         arg[i]=arg[i][0]+'1'+arg[i][1:]
                 else:
                     arg[i]=arg[i]+'1'
@@ -432,15 +432,15 @@ def addones(arg,sym):
         for i in range(numarg):
             if arg[i][0].upper()=='E':
                 if (len(arg[i])>1):
-                    if arg[i][1]!=1:
+                    if arg[i][1]!='1':
                         arg[i]=arg[i][0]+'1'+arg[i][1:]
                 else:
                     arg[i]=arg[i]+'1'
-    if (sym['letter']=='H' and sym['extra']=='D' and sym['rot']<=4):
+    if (sym['letter']=='D' and sym['extra']=='H' and sym['rot']<=4):
         for i in range(numarg):
             if arg[i][0].upper()=='E':
                 if (len(arg[i])>1):
-                    if arg[i][1]!=1:
+                    if arg[i][1]!='1':
                         arg[i]=arg[i][0]+'1'+arg[i][1:]
                 else:
                     arg[i]=arg[i]+'1'
@@ -448,7 +448,7 @@ def addones(arg,sym):
         for i in range(numarg):
             if arg[i][0].upper()=='E':
                 if (len(arg[i])>1):
-                    if arg[i][1]!=1:
+                    if arg[i][1]!='1':
                         arg[i]=arg[i][0]+'1'+arg[i][1:]
                 else:
                     arg[i]=arg[i]+'1'

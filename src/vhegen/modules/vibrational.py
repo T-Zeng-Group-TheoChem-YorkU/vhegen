@@ -178,17 +178,25 @@ class Term: #ExpansionTerm
         needrefl=False
         #print(symmetry)
         realexpand=False
+        needexpand=True
+        if eigenvals[0]==0:
+            realexpand=True
+            if self.prefactor==1j:
+                needexpand=False
+        if symmetry['rot']>0:
+            if eigenvals[0]*2==symmetry['rot']:
+                realexpand=True
+                if self.prefactor==1j:
+                    needexpand=False
         if symmetry['refl']:
             needrefl=True
-        needexpand=True
+
         if needrefl and self.coeff.stem=='r' and self.sinorcos=='sin' and eigenvals[2]==0:
             needexpand=False
         if needrefl and self.coeff.stem=='i' and self.sinorcos=='cos' and eigenvals[2]==0:
             needexpand=False
         if needrefl and self.coeff.stem=='i' and self.sinorcos=='neither' and eigenvals[2]==0:
             needexpand=False
-        if needrefl and eigenvals[2]==0:
-            realexpand=True
         
         expansions=[]
         indices=[]
