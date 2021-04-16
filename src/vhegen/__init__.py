@@ -211,24 +211,42 @@ class VHEGEN:
                 print(f'creating mctdh element for order {o}')
                 if self.e_coords == 'both':
                     for e in self.expansions[o]:
-                        out.convert_to_MCTDH(self.expansions[o][e][0].expand(trig=True),e,self.matrix.element_position,self,'pol')
+                        if (self.expansions[o][e][0]!=0):
+                            out.convert_to_MCTDH(self.expansions[o][e][0].expand(trig=True),e,self.matrix.element_position,self,'pol')
+                        else:
+                            out.convert_to_MCTDH(self.expansions[o][e][0],e,self.matrix.element_position,self,'pol')
                     for e in self.expansions[o]:
-                        out.convert_to_MCTDH(self.expansions[o][e][1].expand(),e,self.matrix.element_position,self,'cart')         
+                        if (self.expansions[o][e][1]!=0):
+                            out.convert_to_MCTDH(self.expansions[o][e][1].expand(),e,self.matrix.element_position,self,'cart')
+                        else:
+                            out.convert_to_MCTDH(self.expansions[o][e][1],e,self.matrix.element_position,self,'cart')        
                 else:
                     for e in self.expansions[o]:
-                        out.convert_to_MCTDH(self.expansions[o][e][0].expand(trig=True),e,self.matrix.element_position,self,self.e_coords)         
+                        if (self.expansions[o][e][0]!=0):
+                            out.convert_to_MCTDH(self.expansions[o][e][0].expand(trig=True),e,self.matrix.element_position,self,self.e_coords)
+                        else:
+                            out.convert_to_MCTDH(self.expansions[o][e][0],e,self.matrix.element_position,self,self.e_coords)         
 
         if self.basis == 'both' and 'E' in [s[0] for s in self.states]: #use expansions_real
             for o in self.orders:
                 print(f'creating mctdh element for order {o}')
                 if self.e_coords == 'both':
                     for e in self.expansions_real[o]:
-                        out.convert_to_MCTDH(self.expansions_real[o][e][0].expand(trig=True),e,self.matrix_real.element_position,self,'pol')
+                        if (self.expansions_real[o][e][0]!=0):
+                            out.convert_to_MCTDH(self.expansions_real[o][e][0].expand(trig=True),e,self.matrix_real.element_position,self,'pol')
+                        else:
+                            out.convert_to_MCTDH(self.expansions_real[o][e][0],e,self.matrix_real.element_position,self,'pol')
                     for e in self.expansions_real[o]:
-                        out.convert_to_MCTDH(self.expansions_real[o][e][1].expand(),e,self.matrix_real.element_position,self,'cart')
+                        if (self.expansions_real[o][e][1]!=0):
+                            out.convert_to_MCTDH(self.expansions_real[o][e][1].expand(),e,self.matrix_real.element_position,self,'cart')
+                        else:
+                            out.convert_to_MCTDH(self.expansions_real[o][e][1],e,self.matrix_real.element_position,self,'cart')
                 else:
                     for e in self.expansions_real[o]:
-                        out.convert_to_MCTDH(self.expansions_real[o][e][0].expand(trig=True),e,self.matrix_real.element_position,self,self.e_coords)
+                        if (self.expansions_real[o][e][0]!=0):
+                            out.convert_to_MCTDH(self.expansions_real[o][e][0].expand(trig=True),e,self.matrix_real.element_position,self,self.e_coords)
+                        else:
+                            out.convert_to_MCTDH(self.expansions_real[o][e][0],e,self.matrix_real.element_position,self,self.e_coords)
         
             
         self.mctdhoutp.finalize()
