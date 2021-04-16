@@ -1,0 +1,4 @@
+include examples/benzene.py
+include examples/c5h.py
+include examples/config.cfg
+include LICENSE

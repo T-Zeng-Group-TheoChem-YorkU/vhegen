@@ -1,0 +1,38 @@
+#!/usr/bin/env python
+
+
+import vhegen
+import vhegen.modules.output as out
+import vhegen.modules.input as inp
+from copy import deepcopy
+from time import time
+config, user_input = inp.read_input()
+#exit()
+vhegen = vhegen.VHEGEN(user_input)
+out.log_append(vhegen.return_init())
+t1 = time()
+vhegen.set_e_coordinates(str(config[u'e_coords']))
+vhegen.set_basis(str(config[u'basis']))
+vhegen.init_matrix_form()
+out.log_append(vhegen.return_eigenvals())
+vhegen.get_formulas()
+out.log_append(vhegen.return_formulas())
+#out.log_append(vhegen.return_constraints())
+#exit()
+vhegen.get_expansions()
+#exit()
+count_terms = vhegen.return_termcount()
+out.log_append(count_terms)
+out.log_append(vhegen.return_expansions())
+#out.log_write(vhegen.filename,'outputs') 
+#print(vhegen.symmetry)
+if 'true' in str(config[u'pdf_out']):
+    vhegen.pdflatex()
+if 'true' in str(config[u'log_out']):
+    out.log_write(vhegen.filename,'outputs') 
+if 'true' in str(config[u'mctdh_out']):
+    vhegen.mctdhoutput()
+
+print('\nJob complete after '+str(round(time()-t1,3))+' seconds.')
+
+#EOF

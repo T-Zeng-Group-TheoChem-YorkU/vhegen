@@ -1,0 +1,342 @@
+\batchmode
+\documentclass[fleqn]{article}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage[margin=0.7in]{geometry}
+\setlength\mathindent{0pt}
+\allowdisplaybreaks
+\title{VHEGEN: A vibronic Hamiltonian expansion generator for trigonal and tetragonal polyatomic systems}
+\author{James Brown \and Robert A. Lang \and Riley J. Hickman \and Tao Zeng}
+\date{}
+\begin{document}
+\maketitle
+Thank you for using \texttt{VHEGEN}, the \texttt{V}-ibronic \texttt{H}-amiltonian \texttt{E}-xpansion \texttt{GEN}-erator for trigonal and tetragonal polyatomic systems. This is a \texttt{VHEGEN} output file compiled by \texttt{pdflatex}. If the \texttt{VHEGEN} package was used in research resulting in a publication, please reference the article in \textit{Computer Physics Communications} which describes the program ([doi here]). Additional information regarding the matrix element expansion process, including the independent matrix element eigenvalues, their root formulas and constraints, and their transformation to the real basis (if applicable), can be found in the \texttt{log} output file. For questions, bugs, or comments, please contact jbrown88@yorku.ca.\\\\
+\tableofcontents
+\newpage
+\section{Vibronic interaction}
+$E''_{1} \otimes (e'_{1}+e''_{1})$ in $C_{5h}$
+\begin{eqnarray*}
+\rho_1,\phi_1,x_1,y_1 &\rightarrow& e'_{1}\\ 
+\rho_2,\phi_2,x_2,y_2 &\rightarrow& e''_{1}\\ 
+\end{eqnarray*}
+\section{Vibronic Hamiltonian operator in the complex $E$ basis}
+$\hat{H}=\left(\begin{matrix}{\left|+\right\rangle } & {\left|-\right\rangle }\end{matrix}\right) \left(\begin{matrix}H_{++} & H_{+-}\\H_{-+} & H_{--}\end{matrix}\right) \left(\begin{matrix}{\left\langle +\right|}\\{\left\langle -\right|}\end{matrix}\right)$
+\section{Matrix element expansions in the complex $E$ basis}
+\subsection{Order: 0}
+Number of fitting parameters: $H_{++}$: $2$, $H_{+-}$: $0$.
+\subsubsection*{Polar e-coordinates:}
+
+\begin{align*}
+H_{++}^{(0)}=&i a^{i}_{0,0,0,0} + a^{r}_{0,0,0,0}
+\end{align*}
+
+\begin{align*}
+H_{--}^{(0)}=&i a^{i}_{0,0,0,0} + a^{r}_{0,0,0,0}
+\end{align*}
+
+\begin{align*}
+H_{+-}^{(0)}=&0
+\end{align*}
+
+\begin{align*}
+H_{-+}^{(0)}=&0
+\end{align*}
+\subsubsection*{Cartesian e-coordinates:}
+
+\begin{align*}
+H_{++}^{(0)}=& i a^{i}_{0,0,0,0} + a^{r}_{0,0,0,0}
+\end{align*}
+
+\begin{align*}
+H_{--}^{(0)}=& i a^{i}_{0,0,0,0} + a^{r}_{0,0,0,0}
+\end{align*}
+
+\begin{align*}
+H_{+-}^{(0)}=&0
+\end{align*}
+
+\begin{align*}
+H_{-+}^{(0)}=&0
+\end{align*}
+\subsection{Order: 1}
+Number of fitting parameters: $H_{++}$: $0$, $H_{+-}$: $0$.
+\subsubsection*{Polar e-coordinates:}
+
+\begin{align*}
+H_{++}^{(1)}=&0
+\end{align*}
+
+\begin{align*}
+H_{--}^{(1)}=&0
+\end{align*}
+
+\begin{align*}
+H_{+-}^{(1)}=&0
+\end{align*}
+
+\begin{align*}
+H_{-+}^{(1)}=&0
+\end{align*}
+\subsubsection*{Cartesian e-coordinates:}
+
+\begin{align*}
+H_{++}^{(1)}=&0
+\end{align*}
+
+\begin{align*}
+H_{--}^{(1)}=&0
+\end{align*}
+
+\begin{align*}
+H_{+-}^{(1)}=&0
+\end{align*}
+
+\begin{align*}
+H_{-+}^{(1)}=&0
+\end{align*}
+\subsection{Order: 2}
+Number of fitting parameters: $H_{++}$: $4$, $H_{+-}$: $4$.
+\subsubsection*{Polar e-coordinates:}
+
+\begin{align*}
+H_{++}^{(2)}=&i a^{i}_{0,0,0,1} \rho_{2}^{2} + i a^{i}_{0,1,0,0} \rho_{1}^{2} + a^{r}_{0,0,0,1} \rho_{2}^{2} + a^{r}_{0,1,0,0} \rho_{1}^{2}
+\end{align*}
+
+\begin{align*}
+H_{--}^{(2)}=&i a^{i}_{0,0,0,1} \rho_{2}^{2} + i a^{i}_{0,1,0,0} \rho_{1}^{2} + a^{r}_{0,0,0,1} \rho_{2}^{2} + a^{r}_{0,1,0,0} \rho_{1}^{2}
+\end{align*}
+
+\begin{align*}
+H_{+-}^{(2)}=&i b^{i}_{-2,0,0,0} \rho_{1}^{2} \exp (- 2 i \phi_{1}) + i b^{i}_{0,0,-2,0} \rho_{2}^{2} \exp (- 2 i \phi_{2}) + b^{r}_{-2,0,0,0} \rho_{1}^{2} \exp (- 2 i \phi_{1}) +\\
+& b^{r}_{0,0,-2,0} \rho_{2}^{2} \exp (- 2 i \phi_{2})
+\end{align*}
+
+\begin{align*}
+H_{-+}^{(2)}=&- i b^{i}_{-2,0,0,0} \rho_{1}^{2} \exp (2 i \phi_{1}) - i b^{i}_{0,0,-2,0} \rho_{2}^{2} \exp (2 i \phi_{2}) + b^{r}_{-2,0,0,0} \rho_{1}^{2} \exp (2 i \phi_{1}) +\\
+& b^{r}_{0,0,-2,0} \rho_{2}^{2} \exp (2 i \phi_{2})
+\end{align*}
+\subsubsection*{Cartesian e-coordinates:}
+
+\begin{align*}
+H_{++}^{(2)}=& i a^{i}_{0,0,0,1} (x_{2}^{2} + y_{2}^{2}) +  i a^{i}_{0,1,0,0} (x_{1}^{2} + y_{1}^{2}) + a^{r}_{0,0,0,1} (x_{2}^{2} + y_{2}^{2}) + a^{r}_{0,1,0,0} (x_{1}^{2} + y_{1}^{2})
+\end{align*}
+
+\begin{align*}
+H_{--}^{(2)}=& i a^{i}_{0,0,0,1} (x_{2}^{2} + y_{2}^{2}) +  i a^{i}_{0,1,0,0} (x_{1}^{2} + y_{1}^{2}) + a^{r}_{0,0,0,1} (x_{2}^{2} + y_{2}^{2}) + a^{r}_{0,1,0,0} (x_{1}^{2} + y_{1}^{2})
+\end{align*}
+
+\begin{align*}
+H_{+-}^{(2)}=&2 b^{i}_{-2,0,0,0} x_{1} y_{1} +  i b^{i}_{-2,0,0,0} (x_{1} - y_{1}) (x_{1} + y_{1}) + 2 b^{i}_{0,0,-2,0} x_{2} y_{2} +  i b^{i}_{0,0,-2,0} (x_{2} - y_{2}) (x_{2} + y_{2}) -\\
+& 2 i b^{r}_{-2,0,0,0} x_{1} y_{1} + b^{r}_{-2,0,0,0} (x_{1} - y_{1}) (x_{1} + y_{1}) - 2 i b^{r}_{0,0,-2,0} x_{2} y_{2} + b^{r}_{0,0,-2,0} (x_{2} - y_{2}) (x_{2} + y_{2})
+\end{align*}
+
+\begin{align*}
+H_{-+}^{(2)}=&2 b^{i}_{-2,0,0,0} x_{1} y_{1} -  i b^{i}_{-2,0,0,0} (x_{1} - y_{1}) (x_{1} + y_{1}) + 2 b^{i}_{0,0,-2,0} x_{2} y_{2} -  i b^{i}_{0,0,-2,0} (x_{2} - y_{2}) (x_{2} + y_{2}) +\\
+& 2 i b^{r}_{-2,0,0,0} x_{1} y_{1} + b^{r}_{-2,0,0,0} (x_{1} - y_{1}) (x_{1} + y_{1}) + 2 i b^{r}_{0,0,-2,0} x_{2} y_{2} + b^{r}_{0,0,-2,0} (x_{2} - y_{2}) (x_{2} + y_{2})
+\end{align*}
+\subsection{Order: 3}
+Number of fitting parameters: $H_{++}$: $0$, $H_{+-}$: $4$.
+\subsubsection*{Polar e-coordinates:}
+
+\begin{align*}
+H_{++}^{(3)}=&0
+\end{align*}
+
+\begin{align*}
+H_{--}^{(3)}=&0
+\end{align*}
+
+\begin{align*}
+H_{+-}^{(3)}=&i b^{i}_{1,0,2,0} \rho_{1} \rho_{2}^{2} \exp (i (\phi_{1} + 2 \phi_{2})) + i b^{i}_{3,0,0,0} \rho_{1}^{3} \exp (3 i \phi_{1}) + b^{r}_{1,0,2,0} \rho_{1} \rho_{2}^{2} \exp (i (\phi_{1} + 2 \phi_{2})) +\\
+& b^{r}_{3,0,0,0} \rho_{1}^{3} \exp (3 i \phi_{1})
+\end{align*}
+
+\begin{align*}
+H_{-+}^{(3)}=&- i b^{i}_{1,0,2,0} \rho_{1} \rho_{2}^{2} \exp (- i (\phi_{1} + 2 \phi_{2})) - i b^{i}_{3,0,0,0} \rho_{1}^{3} \exp (- 3 i \phi_{1}) + b^{r}_{1,0,2,0} \rho_{1} \rho_{2}^{2} \exp (- i (\phi_{1} +\\
+& 2 \phi_{2})) + b^{r}_{3,0,0,0} \rho_{1}^{3} \exp (- 3 i \phi_{1})
+\end{align*}
+\subsubsection*{Cartesian e-coordinates:}
+
+\begin{align*}
+H_{++}^{(3)}=&0
+\end{align*}
+
+\begin{align*}
+H_{--}^{(3)}=&0
+\end{align*}
+
+\begin{align*}
+H_{+-}^{(3)}=& i b^{i}_{1,0,2,0} (x_{1} (x_{2}^{2} - y_{2}^{2}) - 2 x_{2} y_{1} y_{2}) - b^{i}_{1,0,2,0} (2 x_{1} x_{2} y_{2} + y_{1} (x_{2}^{2} - y_{2}^{2})) +  i b^{i}_{3,0,0,0} x_{1} (x_{1}^{2} - 3 y_{1}^{2}) -\\
+& b^{i}_{3,0,0,0} y_{1} (3 x_{1}^{2} - y_{1}^{2}) + b^{r}_{1,0,2,0} (x_{1} (x_{2}^{2} - y_{2}^{2}) - 2 x_{2} y_{1} y_{2}) +  i b^{r}_{1,0,2,0} (2 x_{1} x_{2} y_{2} + y_{1} (x_{2}^{2} - y_{2}^{2})) +\\
+& b^{r}_{3,0,0,0} x_{1} (x_{1}^{2} - 3 y_{1}^{2}) +  i b^{r}_{3,0,0,0} y_{1} (3 x_{1}^{2} - y_{1}^{2})
+\end{align*}
+
+\begin{align*}
+H_{-+}^{(3)}=&-  i b^{i}_{1,0,2,0} (x_{1} (x_{2}^{2} - y_{2}^{2}) - 2 x_{2} y_{1} y_{2}) - b^{i}_{1,0,2,0} (2 x_{1} x_{2} y_{2} + y_{1} (x_{2}^{2} - y_{2}^{2})) -  i b^{i}_{3,0,0,0} x_{1} (x_{1}^{2} -\\
+& 3 y_{1}^{2}) - b^{i}_{3,0,0,0} y_{1} (3 x_{1}^{2} - y_{1}^{2}) + b^{r}_{1,0,2,0} (x_{1} (x_{2}^{2} - y_{2}^{2}) - 2 x_{2} y_{1} y_{2}) -  i b^{r}_{1,0,2,0} (2 x_{1} x_{2} y_{2} + y_{1} (x_{2}^{2} -\\
+& y_{2}^{2})) + b^{r}_{3,0,0,0} x_{1} (x_{1}^{2} - 3 y_{1}^{2}) -  i b^{r}_{3,0,0,0} y_{1} (3 x_{1}^{2} - y_{1}^{2})
+\end{align*}
+
+\section{Vibronic Hamiltonian operator in the real $E$ basis}
+$\hat{H}=\left(\begin{matrix}{\left|X\right\rangle } & {\left|Y\right\rangle }\end{matrix}\right) \left(\begin{matrix}H_{XX} & H_{XY}\\H_{YX} & H_{YY}\end{matrix}\right) \left(\begin{matrix}{\left\langle X\right|}\\{\left\langle Y\right|}\end{matrix}\right)$
+\section{Matrix element expansions in the real $E$ basis}
+\subsection{Order: 0}
+Number of fitting parameters: $H_{XX}$: $1$ (all from $H_{++}$), $H_{XY}$: $0$, $H_{YY}$: $1$ (all from $H_{++}$).
+\subsubsection*{Polar e-coordinates:}
+
+\begin{align*}
+H_{XX}^{(0)}=&i a^{i}_{0,0,0,0} + a^{r}_{0,0,0,0}
+\end{align*}
+
+\begin{align*}
+H_{XY}^{(0)}=&0
+\end{align*}
+
+\begin{align*}
+H_{YX}^{(0)}=&0
+\end{align*}
+
+\begin{align*}
+H_{YY}^{(0)}=& i a^{i}_{0,0,0,0} +  a^{r}_{0,0,0,0}
+\end{align*}
+\subsubsection*{Cartesian e-coordinates:}
+
+\begin{align*}
+H_{XX}^{(0)}=& i a^{i}_{0,0,0,0} + a^{r}_{0,0,0,0}
+\end{align*}
+
+\begin{align*}
+H_{XY}^{(0)}=&0
+\end{align*}
+
+\begin{align*}
+H_{YX}^{(0)}=&0
+\end{align*}
+
+\begin{align*}
+H_{YY}^{(0)}=& i a^{i}_{0,0,0,0} +  a^{r}_{0,0,0,0}
+\end{align*}
+\subsection{Order: 1}
+Number of fitting parameters: $H_{XX}$: $0$, $H_{XY}$: $0$, $H_{YY}$: $0$.
+\subsubsection*{Polar e-coordinates:}
+
+\begin{align*}
+H_{XX}^{(1)}=&0
+\end{align*}
+
+\begin{align*}
+H_{XY}^{(1)}=&0
+\end{align*}
+
+\begin{align*}
+H_{YX}^{(1)}=&0
+\end{align*}
+
+\begin{align*}
+H_{YY}^{(1)}=&0
+\end{align*}
+\subsubsection*{Cartesian e-coordinates:}
+
+\begin{align*}
+H_{XX}^{(1)}=&0
+\end{align*}
+
+\begin{align*}
+H_{XY}^{(1)}=&0
+\end{align*}
+
+\begin{align*}
+H_{YX}^{(1)}=&0
+\end{align*}
+
+\begin{align*}
+H_{YY}^{(1)}=&0
+\end{align*}
+\subsection{Order: 2}
+Number of fitting parameters: $H_{XX}$: $6$ ($2$ from $H_{++}$, $4$ from $H_{+-}$), $H_{XY}$: $4$ (all from $H_{+-}$), $H_{YY}$: $6$ ($2$ from $H_{++}$, $4$ from $H_{+-}$).
+\subsubsection*{Polar e-coordinates:}
+
+\begin{align*}
+H_{XX}^{(2)}=&a^{r}_{0,0,0,1} \rho_{2}^{2} + a^{r}_{0,1,0,0} \rho_{1}^{2} + b^{i}_{-2,0,0,0} \rho_{1}^{2} \sin (2 \phi_{1}) + b^{i}_{0,0,-2,0} \rho_{2}^{2} \sin (2 \phi_{2}) +\\
+& b^{r}_{-2,0,0,0} \rho_{1}^{2} \cos (2 \phi_{1}) + b^{r}_{0,0,-2,0} \rho_{2}^{2} \cos (2 \phi_{2}) + i (a^{i}_{0,0,0,1} \rho_{2}^{2} + a^{i}_{0,1,0,0} \rho_{1}^{2})
+\end{align*}
+
+\begin{align*}
+H_{XY}^{(2)}=&-  b^{i}_{-2,0,0,0} \rho_{1}^{2} \cos (2 \phi_{1}) -  b^{i}_{0,0,-2,0} \rho_{2}^{2} \cos (2 \phi_{2}) +  b^{r}_{-2,0,0,0} \rho_{1}^{2} \sin (2 \phi_{1}) +\\
+&  b^{r}_{0,0,-2,0} \rho_{2}^{2} \sin (2 \phi_{2})
+\end{align*}
+
+\begin{align*}
+H_{YX}^{(2)}=&-  b^{i}_{-2,0,0,0} \rho_{1}^{2} \cos (2 \phi_{1}) -  b^{i}_{0,0,-2,0} \rho_{2}^{2} \cos (2 \phi_{2}) +  b^{r}_{-2,0,0,0} \rho_{1}^{2} \sin (2 \phi_{1}) +\\
+&  b^{r}_{0,0,-2,0} \rho_{2}^{2} \sin (2 \phi_{2})
+\end{align*}
+
+\begin{align*}
+H_{YY}^{(2)}=& a^{r}_{0,0,0,1} \rho_{2}^{2} +  a^{r}_{0,1,0,0} \rho_{1}^{2} -  b^{i}_{-2,0,0,0} \rho_{1}^{2} \sin (2 \phi_{1}) -  b^{i}_{0,0,-2,0} \rho_{2}^{2} \sin (2 \phi_{2}) -\\
+&  b^{r}_{-2,0,0,0} \rho_{1}^{2} \cos (2 \phi_{1}) -  b^{r}_{0,0,-2,0} \rho_{2}^{2} \cos (2 \phi_{2}) +  i (a^{i}_{0,0,0,1} \rho_{2}^{2} + a^{i}_{0,1,0,0} \rho_{1}^{2})
+\end{align*}
+\subsubsection*{Cartesian e-coordinates:}
+
+\begin{align*}
+H_{XX}^{(2)}=&a^{r}_{0,0,0,1} (x_{2}^{2} + y_{2}^{2}) + a^{r}_{0,1,0,0} (x_{1}^{2} + y_{1}^{2}) + 2 b^{i}_{-2,0,0,0} x_{1} y_{1} + 2 b^{i}_{0,0,-2,0} x_{2} y_{2} + b^{r}_{-2,0,0,0} (x_{1} - y_{1}) (x_{1} + y_{1}) +\\
+& b^{r}_{0,0,-2,0} (x_{2} - y_{2}) (x_{2} + y_{2}) + i ( a^{i}_{0,0,0,1} (x_{2}^{2} + y_{2}^{2}) +  a^{i}_{0,1,0,0} (x_{1}^{2} + y_{1}^{2}))
+\end{align*}
+
+\begin{align*}
+H_{XY}^{(2)}=&-  b^{i}_{-2,0,0,0} (x_{1} - y_{1}) (x_{1} + y_{1}) -  b^{i}_{0,0,-2,0} (x_{2} - y_{2}) (x_{2} + y_{2}) + 2 b^{r}_{-2,0,0,0} x_{1} y_{1} + 2 b^{r}_{0,0,-2,0} x_{2} y_{2}
+\end{align*}
+
+\begin{align*}
+H_{YX}^{(2)}=&-  b^{i}_{-2,0,0,0} (x_{1} - y_{1}) (x_{1} + y_{1}) -  b^{i}_{0,0,-2,0} (x_{2} - y_{2}) (x_{2} + y_{2}) + 2 b^{r}_{-2,0,0,0} x_{1} y_{1} + 2 b^{r}_{0,0,-2,0} x_{2} y_{2}
+\end{align*}
+
+\begin{align*}
+H_{YY}^{(2)}=& a^{r}_{0,0,0,1} (x_{2}^{2} + y_{2}^{2}) +  a^{r}_{0,1,0,0} (x_{1}^{2} + y_{1}^{2}) - 2 b^{i}_{-2,0,0,0} x_{1} y_{1} - 2 b^{i}_{0,0,-2,0} x_{2} y_{2} -  b^{r}_{-2,0,0,0} (x_{1} - y_{1}) (x_{1} +\\
+& y_{1}) -  b^{r}_{0,0,-2,0} (x_{2} - y_{2}) (x_{2} + y_{2}) +  i ( a^{i}_{0,0,0,1} (x_{2}^{2} + y_{2}^{2}) +  a^{i}_{0,1,0,0} (x_{1}^{2} + y_{1}^{2}))
+\end{align*}
+\subsection{Order: 3}
+Number of fitting parameters: $H_{XX}$: $4$ (all from $H_{+-}$), $H_{XY}$: $4$ (all from $H_{+-}$), $H_{YY}$: $4$ (all from $H_{+-}$).
+\subsubsection*{Polar e-coordinates:}
+
+\begin{align*}
+H_{XX}^{(3)}=&- b^{i}_{1,0,2,0} \rho_{1} \rho_{2}^{2} \sin (\phi_{1} + 2 \phi_{2}) - b^{i}_{3,0,0,0} \rho_{1}^{3} \sin (3 \phi_{1}) + b^{r}_{1,0,2,0} \rho_{1} \rho_{2}^{2} \cos (\phi_{1} + 2 \phi_{2}) +\\
+& b^{r}_{3,0,0,0} \rho_{1}^{3} \cos (3 \phi_{1})
+\end{align*}
+
+\begin{align*}
+H_{XY}^{(3)}=&-  b^{i}_{1,0,2,0} \rho_{1} \rho_{2}^{2} \cos (\phi_{1} + 2 \phi_{2}) -  b^{i}_{3,0,0,0} \rho_{1}^{3} \cos (3 \phi_{1}) -  b^{r}_{1,0,2,0} \rho_{1} \rho_{2}^{2} \sin (\phi_{1} + 2 \phi_{2}) -\\
+&  b^{r}_{3,0,0,0} \rho_{1}^{3} \sin (3 \phi_{1})
+\end{align*}
+
+\begin{align*}
+H_{YX}^{(3)}=&-  b^{i}_{1,0,2,0} \rho_{1} \rho_{2}^{2} \cos (\phi_{1} + 2 \phi_{2}) -  b^{i}_{3,0,0,0} \rho_{1}^{3} \cos (3 \phi_{1}) -  b^{r}_{1,0,2,0} \rho_{1} \rho_{2}^{2} \sin (\phi_{1} + 2 \phi_{2}) -\\
+&  b^{r}_{3,0,0,0} \rho_{1}^{3} \sin (3 \phi_{1})
+\end{align*}
+
+\begin{align*}
+H_{YY}^{(3)}=& b^{i}_{1,0,2,0} \rho_{1} \rho_{2}^{2} \sin (\phi_{1} + 2 \phi_{2}) +  b^{i}_{3,0,0,0} \rho_{1}^{3} \sin (3 \phi_{1}) -  b^{r}_{1,0,2,0} \rho_{1} \rho_{2}^{2} \cos (\phi_{1} + 2 \phi_{2}) -\\
+&  b^{r}_{3,0,0,0} \rho_{1}^{3} \cos (3 \phi_{1})
+\end{align*}
+\subsubsection*{Cartesian e-coordinates:}
+
+\begin{align*}
+H_{XX}^{(3)}=&- b^{i}_{1,0,2,0} (2 x_{1} x_{2} y_{2} + y_{1} (x_{2}^{2} - y_{2}^{2})) - b^{i}_{3,0,0,0} y_{1} (3 x_{1}^{2} - y_{1}^{2}) + b^{r}_{1,0,2,0} (x_{1} (x_{2}^{2} - y_{2}^{2}) - 2 x_{2} y_{1} y_{2}) +\\
+& b^{r}_{3,0,0,0} x_{1} (x_{1}^{2} - 3 y_{1}^{2})
+\end{align*}
+
+\begin{align*}
+H_{XY}^{(3)}=&-  b^{i}_{1,0,2,0} (x_{1} (x_{2}^{2} - y_{2}^{2}) - 2 x_{2} y_{1} y_{2}) -  b^{i}_{3,0,0,0} x_{1} (x_{1}^{2} - 3 y_{1}^{2}) -  b^{r}_{1,0,2,0} (2 x_{1} x_{2} y_{2} + y_{1} (x_{2}^{2} - y_{2}^{2})) -\\
+&  b^{r}_{3,0,0,0} y_{1} (3 x_{1}^{2} - y_{1}^{2})
+\end{align*}
+
+\begin{align*}
+H_{YX}^{(3)}=&-  b^{i}_{1,0,2,0} (x_{1} (x_{2}^{2} - y_{2}^{2}) - 2 x_{2} y_{1} y_{2}) -  b^{i}_{3,0,0,0} x_{1} (x_{1}^{2} - 3 y_{1}^{2}) -  b^{r}_{1,0,2,0} (2 x_{1} x_{2} y_{2} + y_{1} (x_{2}^{2} - y_{2}^{2})) -\\
+&  b^{r}_{3,0,0,0} y_{1} (3 x_{1}^{2} - y_{1}^{2})
+\end{align*}
+
+\begin{align*}
+H_{YY}^{(3)}=& b^{i}_{1,0,2,0} (2 x_{1} x_{2} y_{2} + y_{1} (x_{2}^{2} - y_{2}^{2})) +  b^{i}_{3,0,0,0} y_{1} (3 x_{1}^{2} - y_{1}^{2}) -  b^{r}_{1,0,2,0} (x_{1} (x_{2}^{2} - y_{2}^{2}) - 2 x_{2} y_{1} y_{2}) -\\
+&  b^{r}_{3,0,0,0} x_{1} (x_{1}^{2} - 3 y_{1}^{2})
+\end{align*}
+
+\end{document}

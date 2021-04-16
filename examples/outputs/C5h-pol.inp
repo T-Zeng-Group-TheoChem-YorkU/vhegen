@@ -1,0 +1,15 @@
+RUN-SECTION
+name=C5h-pol
+title=C5h-pol
+
+OPERATOR-SECTION
+opname=C5h-pol
+end-operator-section
+
+PBASIS-SECTION
+rho1    lagu1   35       0.0 0.5
+phi1    exp     35       0.00 6.283185307179586 periodic
+rho2    lagu1   35       0.0 0.5
+phi2    exp     35       0.00 6.283185307179586 periodic
+el      el      4       
+end-pbasis-section

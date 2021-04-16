@@ -1,0 +1,97 @@
+OP_DEFINE-SECTION
+title
+   C5h-pol
+end-title
+end-op_define-section
+
+PARAMETER-SECTION
+mass_e1=
+mass_e2=
+I=
+Ar0000=
+Ar0001=
+Ar0100=
+Bim2000=
+Bi00m20=
+Brm2000=
+Br00m20=
+Bi1020=
+Bi3000=
+Br1020=
+Br3000=
+end-parameter-section
+
+--------------------------------------------------------------------------
+HAMILTONIAN-SECTION
+--------------------------------------------------------------------------
+ modes                    | rho1 | phi1        | rho2 | phi2        | el
+--------------------------------------------------------------------------
+-1/2*mass_e1              | dq^2 | 1           | 1    | 1           | 1          
+-1/8*mass_e1              | q^-2 | 1           | 1    | 1           | 1          
+-1/2*mass_e1              | q^-2 | dq^2        | 1    | 1           | 1          
+-1/2*mass_e2              | 1    | 1           | dq^2 | 1           | 1          
+-1/8*mass_e2              | 1    | 1           | q^-2 | 1           | 1          
+-1/2*mass_e2              | 1    | 1           | q^-2 | dq^2        | 1          
+I                         | 1    | 1           | 1    | 1           | S1&1
+Ar0000                    | 1    | 1           | 1    | 1           | S1&1
+I                         | 1    | 1           | 1    | 1           | S2&2
+Ar0000                    | 1    | 1           | 1    | 1           | S2&2
+I                         | 1    | 1           | q^2  | 1           | S1&1
+I                         | q^2  | 1           | 1    | 1           | S1&1
+Ar0001                    | 1    | 1           | q^2  | 1           | S1&1
+Ar0100                    | q^2  | 1           | 1    | 1           | S1&1
+2*Bim2000                 | q^2  | sin*cos     | 1    | 1           | S1&1
+2*Bi00m20                 | 1    | 1           | q^2  | sin*cos     | S1&1
+2*Brm2000                 | q^2  | cos^2       | 1    | 1           | S1&1
+-Brm2000                  | q^2  | 1           | 1    | 1           | S1&1
+2*Br00m20                 | 1    | 1           | q^2  | cos^2       | S1&1
+-Br00m20                  | 1    | 1           | q^2  | 1           | S1&1
+-2*Bim2000                | q^2  | cos^2       | 1    | 1           | S1&2
+Bim2000                   | q^2  | 1           | 1    | 1           | S1&2
+-2*Bi00m20                | 1    | 1           | q^2  | cos^2       | S1&2
+Bi00m20                   | 1    | 1           | q^2  | 1           | S1&2
+2*Brm2000                 | q^2  | sin*cos     | 1    | 1           | S1&2
+2*Br00m20                 | 1    | 1           | q^2  | sin*cos     | S1&2
+I                         | 1    | 1           | q^2  | 1           | S2&2
+I                         | q^2  | 1           | 1    | 1           | S2&2
+Ar0001                    | 1    | 1           | q^2  | 1           | S2&2
+Ar0100                    | q^2  | 1           | 1    | 1           | S2&2
+-2*Bim2000                | q^2  | sin*cos     | 1    | 1           | S2&2
+-2*Bi00m20                | 1    | 1           | q^2  | sin*cos     | S2&2
+-2*Brm2000                | q^2  | cos^2       | 1    | 1           | S2&2
+Brm2000                   | q^2  | 1           | 1    | 1           | S2&2
+-2*Br00m20                | 1    | 1           | q^2  | cos^2       | S2&2
+Br00m20                   | 1    | 1           | q^2  | 1           | S2&2
+-2*Bi1020                 | q    | sin         | q^2  | cos^2       | S1&1
+Bi1020                    | q    | sin         | q^2  | 1           | S1&1
+-2*Bi1020                 | q    | cos         | q^2  | sin*cos     | S1&1
+4*Bi3000                  | q^3  | sin^3       | 1    | 1           | S1&1
+-3*Bi3000                 | q^3  | sin         | 1    | 1           | S1&1
+-2*Br1020                 | q    | sin         | q^2  | sin*cos     | S1&1
+2*Br1020                  | q    | cos         | q^2  | cos^2       | S1&1
+-Br1020                   | q    | cos         | q^2  | 1           | S1&1
+4*Br3000                  | q^3  | cos^3       | 1    | 1           | S1&1
+-3*Br3000                 | q^3  | cos         | 1    | 1           | S1&1
+2*Bi1020                  | q    | sin         | q^2  | sin*cos     | S1&2
+-2*Bi1020                 | q    | cos         | q^2  | cos^2       | S1&2
+Bi1020                    | q    | cos         | q^2  | 1           | S1&2
+-4*Bi3000                 | q^3  | cos^3       | 1    | 1           | S1&2
+3*Bi3000                  | q^3  | cos         | 1    | 1           | S1&2
+-2*Br1020                 | q    | sin         | q^2  | cos^2       | S1&2
+Br1020                    | q    | sin         | q^2  | 1           | S1&2
+-2*Br1020                 | q    | cos         | q^2  | sin*cos     | S1&2
+4*Br3000                  | q^3  | sin^3       | 1    | 1           | S1&2
+-3*Br3000                 | q^3  | sin         | 1    | 1           | S1&2
+2*Bi1020                  | q    | sin         | q^2  | cos^2       | S2&2
+-Bi1020                   | q    | sin         | q^2  | 1           | S2&2
+2*Bi1020                  | q    | cos         | q^2  | sin*cos     | S2&2
+-4*Bi3000                 | q^3  | sin^3       | 1    | 1           | S2&2
+3*Bi3000                  | q^3  | sin         | 1    | 1           | S2&2
+2*Br1020                  | q    | sin         | q^2  | sin*cos     | S2&2
+-2*Br1020                 | q    | cos         | q^2  | cos^2       | S2&2
+Br1020                    | q    | cos         | q^2  | 1           | S2&2
+-4*Br3000                 | q^3  | cos^3       | 1    | 1           | S2&2
+3*Br3000                  | q^3  | cos         | 1    | 1           | S2&2
+end-hamiltonian-section
+
+end-operator

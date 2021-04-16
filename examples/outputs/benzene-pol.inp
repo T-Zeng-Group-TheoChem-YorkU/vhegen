@@ -1,0 +1,21 @@
+RUN-SECTION
+name=benzene-pol
+title=benzene-pol
+
+OPERATOR-SECTION
+opname=benzene-pol
+end-operator-section
+
+PBASIS-SECTION
+rho1    lagu1   35       0.0 0.5
+phi1    exp     35       0.00 6.283185307179586 periodic
+rho2    lagu1   35       0.0 0.5
+phi2    exp     35       0.00 6.283185307179586 periodic
+rho3    lagu1   35       0.0 0.5
+phi3    exp     35       0.00 6.283185307179586 periodic
+rho4    lagu1   35       0.0 0.5
+phi4    exp     35       0.00 6.283185307179586 periodic
+rho5    lagu1   35       0.0 0.5
+phi5    exp     35       0.00 6.283185307179586 periodic
+el      el      4       
+end-pbasis-section
