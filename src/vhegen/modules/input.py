@@ -338,7 +338,7 @@ def return_acceptable_states(sym):
                 emax=sym['rot']//2
                 for i in range(emax):
                     states.full.append('E'+str(i+1)+"''")
-                    states.labels.append(('E',i+1,1,"''"))
+                    states.labels.append(('E',i+1,2,"''"))
                 sym['refl']=True
             elif (sym['extra']=='D'):
                 states.full.append("A1g")
